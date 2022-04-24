@@ -49,24 +49,63 @@
                <div class="mt-2 mb-4 text-center">
                   <h4>CONTACT US</h4>
                </div>
-               <form method="post" data-form-title="CONTACT US" id="conact-form">
-                  <input type="hidden" data-form-email="true">
+               <form action="#" method="post" class="needs-validation" novalidate>
                   <div class="form-group">
-                     <input type="text" class="form-control" id="name" name="name" required="" placeholder="Name*" data-form-field="Name">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" minlength="4"
+                      required>
+                    <div class="valid-feedback">Valid Name</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
                   </div>
+        
                   <div class="form-group">
-                     <input type="email" class="form-control" id="email" name="email" required="" placeholder="Email*" data-form-field="Email">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    <div class="valid-feedback">Valid Email</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
                   </div>
+        
                   <div class="form-group">
-                     <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" data-form-field="Phone" required>
+                  <label for="validationCustom04" class="form-label">City:</label>
+                  <select class="form-select form-control" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Dubai</option>
+                    <option>Abu Dhabi</option>
+                    <option>Ajmān</option>
+                    <option>Al Ain</option>
+                    <option>Al Awdah</option>
+                    <option>Al Fahlayn</option>
+                    <option>Al Fulayyah</option>
+                    <option>Al Fara'</option>
+                    <option>Al Ghabah</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid city.
                   </div>
+                  <div class="valid-feedback">Valid City</div>
+                </div>
+        
                   <div class="form-group">
-                     <textarea class="form-control" id="message" name="message" placeholder="Message" rows="7" data-form-field="Message" required minlength="20"></textarea>
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="Message" minlength="10" required></textarea>
+                    <div class="valid-feedback">Valid Message</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div><br>
+        
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
                   </div>
-                  <div class="text-center mb-5">
-                     <button type="submit" class="btn btn-lg btn-danger">Submit</button>
-                  </div>
-               </form>
+                  <br>
+        
+                  <input class="btn btn-primary w-100" type="submit" value="Submit" />
+              
+              </form>
             </div>
             <div class="col-md-6">
                <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">insert google map html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div></div>
@@ -81,5 +120,28 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
       <script src="js/script.js"></script>
+
+
+      <script>
+         // Example starter JavaScript for disabling form submissions if there are invalid fields
+         (function () {
+           'use strict';
+           window.addEventListener('load', function () {
+             // Fetch all the forms we want to apply custom Bootstrap validation styles to
+             var forms = document.getElementsByClassName('needs-validation');
+             // Loop over them and prevent submission
+             var validation = Array.prototype.filter.call(forms, function (form) {
+               form.addEventListener('submit', function (event) {
+                 if (form.checkValidity() === false) {
+                   event.preventDefault();
+                   event.stopPropagation();
+                 }
+                 form.classList.add('was-validated');
+               }, false);
+             });
+           }, false);
+         })();
+       </script>
+       
    </body>
 </html>
