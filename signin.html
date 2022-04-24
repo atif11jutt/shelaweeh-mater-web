@@ -1,27 +1,29 @@
 <html>
-<head>
-<title>Sign In</title>
-<link rel="stylesheet" href="css/signin.css">
-<link rel="icon" type="image/PNG" href="images/favicon.png">
-</head>
-<body>
-<div class="sign-up">
-    <a href="home.html">
-        <img src="images/logo.png" alt="" style="width: 80px;">
-    </a>
-    <h1>Sign In</h1>
-    <form>
-<input type="email" class="input-box" placeholder="Enter Your Email">
-<input type="password" class="input-box" placeholder="Enter Your Password">
-<p><span><input type="checkbox"></span>Keep me logged in</p>
-<button type="button" class="sign-up-btm">Sign In</button>
-<hr>
-<p class="or">Or</p>
 
-<button type="button" class="twitter-btm">Login With Twitter</button>
-<p>Don't have an account?<a href="signup.html">Sign up</a></p>
-</form>
-</div>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="icon" type="image/PNG" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="sign-up">
+        <a href="home.html">
+            <img src="images/logo.png" alt="" style="width: 80px;">
+        </a>
+        <h1>Sign In</h1>
+        <form>
+            <input type="email" class="input-box" name="email" placeholder="Enter Your Email" required>
+            <input type="password" class="input-box" name="password" placeholder="Enter Your Password" required>
+            <p><span><input type="checkbox"></span>Keep me logged in</p>
+            <button type="submit" class="sign-up-btm">Sign In</button>
+            <hr>
+            <p class="or">Or</p>
+
+            <button type="button" class="twitter-btm">Login With Twitter</button>
+            <p>Don't have an account?<a href="signup.html">Sign up</a></p>
+        </form>
+    </div>
 </body>
 
 </html>
